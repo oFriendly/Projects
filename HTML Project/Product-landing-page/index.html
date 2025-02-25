@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      #nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #333;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      #nav-bar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background: lightgray;
+        position: relative;
+        margin-top: 50px;
+      }
+
+      #header-img {
+        width: 100px;
+      }
+
+      #video {
+        width: 560px;
+        height: 315px;
+        margin: 20px auto;
+      }
+
+      #form {
+        margin: 20px;
+      }
+
+      #email {
+        width: 300px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+      }
+
+      #submit {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      /* Flexbox Section */
+      .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        background: #f4f4f4;
+      }
+
+      .feature-box {
+        width: 30%;
+        padding: 20px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .features {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .feature-box {
+          width: 80%;
+          margin-bottom: 10px;
+        }
+
+        #video {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <img
+        id="header-img"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cd38f66e-5dbe-4c3c-9068-69406568ff86/dfdu45i-40c9c1cc-d052-414e-b108-0a81ffb18b67.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NkMzhmNjZlLTVkYmUtNGMzYy05MDY4LTY5NDA2NTY4ZmY4NlwvZGZkdTQ1aS00MGM5YzFjYy1kMDUyLTQxNGUtYjEwOC0wYTgxZmZiMThiNjcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uyfIRk9z5rnaonAD5mwAs1XCnb18p--syeLx7ddOZqE"
+        alt="Product Logo"
+      />
+      <nav id="nav-bar">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Video -->
+    <section id="about">
+      <h1>Ensuring quality service since 27 July 1987</h1>
+      <h2>Rick Astley Inc.©</h2>
+      <iframe
+        id="video"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <!-- Promises -->
+    <section id="features" class="features">
+      <div class="feature-box">
+        <h3>Our first promise.</h3>
+        <p>We'll never give you up or let you down.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Our second guarantee.</h3>
+        <p>We'll never run around and desert you.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Our final vow.</h3>
+        <p>We'll never make you cry or say Goodbye.</p>
+      </div>
+    </section>
+
+    <!-- Contact-->
+    <section id="contact">
+      <h2>Reach out, we won't tell a lie.</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="RickAstley@Domain.com"
+          required
+        />
+        <input id="submit" type="submit" value="Contact Us" />
+      </form>
+    </section>
+  </body>
+</html>
